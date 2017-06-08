@@ -1,0 +1,88 @@
+var _user$project$Main$req = _elm_lang$http$Http$getString('http://localhost:1000');
+var _user$project$Main$sub = function (m) {
+	return _elm_lang$core$Platform_Sub$none;
+};
+var _user$project$Main$Model = F2(
+	function (a, b) {
+		return {str: a, $int: b};
+	});
+var _user$project$Main$init = {
+	ctor: '_Tuple2',
+	_0: A2(_user$project$Main$Model, '', 0),
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$Main$F2 = function (a) {
+	return {ctor: 'F2', _0: a};
+};
+var _user$project$Main$send = A2(_elm_lang$http$Http$send, _user$project$Main$F2, _user$project$Main$req);
+var _user$project$Main$c = F2(
+	function (f, m) {
+		var _p0 = f;
+		if (_p0.ctor === 'F1') {
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					m,
+					{str: 'aa'}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		} else {
+			if (_p0._0.ctor === 'Ok') {
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						m,
+						{str: 'aa'}),
+					_1: _user$project$Main$send
+				};
+			} else {
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						m,
+						{str: 'aa'}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			}
+		}
+	});
+var _user$project$Main$F1 = {ctor: 'F1'};
+var _user$project$Main$v = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(
+				_elm_lang$core$Basics$toString(_user$project$Main$send)),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$F1),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('button'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(m.str),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Main$main = _elm_lang$html$Html$program(
+	{init: _user$project$Main$init, view: _user$project$Main$v, update: _user$project$Main$c, subscriptions: _user$project$Main$sub})();

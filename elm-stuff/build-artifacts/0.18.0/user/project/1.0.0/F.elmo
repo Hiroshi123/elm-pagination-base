@@ -1,0 +1,9 @@
+var _user$project$F$Save = {ctor: 'Save'};
+var _user$project$F$Remove = {ctor: 'Remove'};
+var _user$project$F$Add = {ctor: 'Add'};
+var _user$project$F$Input = function (a) {
+	return {ctor: 'Input', _0: a};
+};
+var _user$project$F$SwitchTo = function (a) {
+	return {ctor: 'SwitchTo', _0: a};
+};

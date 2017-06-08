@@ -1,0 +1,51 @@
+var _user$project$Todo_View_Page2$li_ele2 = function (l) {
+	var _p0 = l;
+	if (_p0.ctor === '[]') {
+		return {ctor: '[]'};
+	} else {
+		return A2(
+			_elm_lang$core$Basics_ops['++'],
+			_user$project$Todo_View_Page2$li_ele2(_p0._1),
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$li,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(
+							_elm_lang$core$Basics$toString(_p0._0)),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			});
+	}
+};
+var _user$project$Todo_View_Page2$page2 = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$Todo_View_Common$tab_field,
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(m.page_info.title),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$ol,
+						{ctor: '[]'},
+						_user$project$Todo_View_Page2$li_ele2(m.todo.content)),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};

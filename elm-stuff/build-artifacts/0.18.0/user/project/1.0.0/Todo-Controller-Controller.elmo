@@ -1,0 +1,102 @@
+var _user$project$Todo_Controller_Controller$pop = function (a) {
+	var _p0 = a;
+	if (_p0.ctor === '::') {
+		return _p0._1;
+	} else {
+		return {ctor: '[]'};
+	}
+};
+var _user$project$Todo_Controller_Controller$c = F2(
+	function (f, m) {
+		var _p1 = f;
+		switch (_p1.ctor) {
+			case 'SwitchTo':
+				switch (_p1._0.ctor) {
+					case 'Page1':
+						return _elm_lang$core$Native_Utils.update(
+							m,
+							{
+								page_info: A2(_user$project$Todo_Model_Model$PageInfo, _user$project$Todo_Model_Model$Page1, 'page1')
+							});
+					case 'Page2':
+						return _elm_lang$core$Native_Utils.update(
+							m,
+							{
+								page_info: A2(_user$project$Todo_Model_Model$PageInfo, _user$project$Todo_Model_Model$Page2, 'page2')
+							});
+					case 'Page3':
+						return _elm_lang$core$Native_Utils.update(
+							m,
+							{
+								page_info: A2(_user$project$Todo_Model_Model$PageInfo, _user$project$Todo_Model_Model$Page3, 'page3')
+							});
+					default:
+						return _elm_lang$core$Native_Utils.update(
+							m,
+							{
+								page_info: A2(_user$project$Todo_Model_Model$PageInfo, _user$project$Todo_Model_Model$Top, '')
+							});
+				}
+			case 'Input':
+				return _elm_lang$core$Native_Utils.update(
+					m,
+					{
+						tab1: A3(_user$project$Todo_Model_Model$Tab1, m.tab1.name, _p1._0, m.tab1.todo)
+					});
+			case 'Add':
+				var _p2 = m.tab1.candidate;
+				if (_p2 === '') {
+					return _elm_lang$core$Native_Utils.update(
+						m,
+						{
+							tab1: A3(_user$project$Todo_Model_Model$Tab1, m.tab1.name, '', m.tab1.todo)
+						});
+				} else {
+					return _elm_lang$core$Native_Utils.update(
+						m,
+						{
+							tab1: A3(
+								_user$project$Todo_Model_Model$Tab1,
+								m.tab1.name,
+								'',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									{
+										ctor: '::',
+										_0: m.tab1.candidate,
+										_1: {ctor: '[]'}
+									},
+									m.tab1.todo))
+						});
+				}
+			case 'Remove':
+				return _elm_lang$core$Native_Utils.update(
+					m,
+					{
+						tab1: A3(
+							_user$project$Todo_Model_Model$Tab1,
+							m.tab1.name,
+							'',
+							_user$project$Todo_Controller_Controller$pop(m.tab1.todo))
+					});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					m,
+					{
+						todo: _user$project$Todo_Model_Model$Todo(
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								{
+									ctor: '::',
+									_0: m.tab1,
+									_1: {ctor: '[]'}
+								},
+								m.todo.content)),
+						tab1: A3(
+							_user$project$Todo_Model_Model$Tab1,
+							m.tab1.name,
+							'',
+							{ctor: '[]'})
+					});
+		}
+	});

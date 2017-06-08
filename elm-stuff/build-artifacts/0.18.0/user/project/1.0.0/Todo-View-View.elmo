@@ -1,0 +1,16 @@
+var _user$project$Todo_View_View$dom = function (m) {
+	var _p0 = m.page_info.page;
+	switch (_p0.ctor) {
+		case 'Top':
+			return _user$project$Todo_View_Index$top(m);
+		case 'Page1':
+			return _user$project$Todo_View_Page1$page1(m);
+		case 'Page2':
+			return _user$project$Todo_View_Page2$page2(m);
+		default:
+			return _user$project$Todo_View_Page3$page3(m);
+	}
+};
+var _user$project$Todo_View_View$v = function (m) {
+	return _user$project$Todo_View_View$dom(m);
+};

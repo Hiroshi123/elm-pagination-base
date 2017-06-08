@@ -1,0 +1,2 @@
+var _user$project$Cat$main = _elm_lang$html$Html$beginnerProgram(
+	{model: _user$project$Todo_Model_Model$init, view: _user$project$Todo_View_View$v, update: _user$project$Todo_Controller_Controller$c})();

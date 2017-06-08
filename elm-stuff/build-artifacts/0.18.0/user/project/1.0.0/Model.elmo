@@ -1,0 +1,31 @@
+var _user$project$Model$init_title = 'default title';
+var _user$project$Model$M = F4(
+	function (a, b, c, d) {
+		return {page_info: a, todo: b, tab1: c, query: d};
+	});
+var _user$project$Model$PageInfo = F2(
+	function (a, b) {
+		return {page: a, title: b};
+	});
+var _user$project$Model$Todo = function (a) {
+	return {content: a};
+};
+var _user$project$Model$Tab1 = F3(
+	function (a, b, c) {
+		return {name: a, candidate: b, todo: c};
+	});
+var _user$project$Model$Page3 = {ctor: 'Page3'};
+var _user$project$Model$Page2 = {ctor: 'Page2'};
+var _user$project$Model$Page1 = {ctor: 'Page1'};
+var _user$project$Model$Top = {ctor: 'Top'};
+var _user$project$Model$init = A4(
+	_user$project$Model$M,
+	A2(_user$project$Model$PageInfo, _user$project$Model$Top, ''),
+	_user$project$Model$Todo(
+		{ctor: '[]'}),
+	A3(
+		_user$project$Model$Tab1,
+		'todo01',
+		'',
+		{ctor: '[]'}),
+	'');

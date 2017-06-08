@@ -1,0 +1,393 @@
+var _user$project$Dog$page3 = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text('page3'),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Dog$page2 = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text('page2'),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Dog$add = F2(
+	function (a, li) {
+		return A2(
+			_elm_lang$core$Basics_ops['++'],
+			{
+				ctor: '::',
+				_0: a,
+				_1: {ctor: '[]'}
+			},
+			li);
+	});
+var _user$project$Dog$num = {
+	ctor: '::',
+	_0: 'a',
+	_1: {
+		ctor: '::',
+		_0: 'b',
+		_1: {
+			ctor: '::',
+			_0: 'c',
+			_1: {
+				ctor: '::',
+				_0: 'd',
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _user$project$Dog$init_content = 'default content';
+var _user$project$Dog$M = F6(
+	function (a, b, c, d, e, f) {
+		return {value: a, page: b, content: c, html: d, input1: e, list1: f};
+	});
+var _user$project$Dog$Add = function (a) {
+	return {ctor: 'Add', _0: a};
+};
+var _user$project$Dog$InputUpdate = function (a) {
+	return {ctor: 'InputUpdate', _0: a};
+};
+var _user$project$Dog$page1 = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$input,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$type_('text'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$placeholder('pika'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onInput(_user$project$Dog$InputUpdate),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{
+						ctor: '::',
+						_0: _user$project$Style$button_style,
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onClick(
+								_user$project$Dog$Add('aaa')),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('add'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$label,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(m.input1),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(
+									_elm_lang$core$Basics$toString(
+										A2(_user$project$Dog$add, m.input1, m.list1))),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$Dog$which_page = function (m) {
+	var _p0 = m.page;
+	switch (_p0.ctor) {
+		case 'Page1':
+			return _user$project$Dog$page1(m);
+		case 'Page2':
+			return _user$project$Dog$page2(m);
+		case 'Page3':
+			return _user$project$Dog$page3(m);
+		default:
+			return A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{ctor: '[]'});
+	}
+};
+var _user$project$Dog$dom = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$Dog$which_page(m),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Dog$v = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$Dog$dom(m),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Dog$contents = F2(
+	function (p, m) {
+		var _p1 = p;
+		switch (_p1.ctor) {
+			case 'SignIn':
+				return A2(
+					_elm_lang$html$Html$div,
+					{ctor: '[]'},
+					{ctor: '[]'});
+			case 'Page1':
+				return _user$project$Dog$page1(m);
+			case 'Page2':
+				return _user$project$Dog$page2(m);
+			default:
+				return _user$project$Dog$page3(m);
+		}
+	});
+var _user$project$Dog$PageSwitch = function (a) {
+	return {ctor: 'PageSwitch', _0: a};
+};
+var _user$project$Dog$F1 = {ctor: 'F1'};
+var _user$project$Dog$Page3 = {ctor: 'Page3'};
+var _user$project$Dog$Page2 = {ctor: 'Page2'};
+var _user$project$Dog$Page1 = {ctor: 'Page1'};
+var _user$project$Dog$init_page = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$Style$top_page_style,
+		_1: {ctor: '[]'}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$label,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('start'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$button,
+				{
+					ctor: '::',
+					_0: _user$project$Style$button_style,
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(
+							_user$project$Dog$PageSwitch(_user$project$Dog$Page1)),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('start'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$Dog$init = A6(
+	_user$project$Dog$M,
+	0,
+	_user$project$Dog$Page1,
+	_user$project$Dog$init_content,
+	_user$project$Dog$init_page,
+	'',
+	{
+		ctor: '::',
+		_0: 'a',
+		_1: {
+			ctor: '::',
+			_0: 'b',
+			_1: {
+				ctor: '::',
+				_0: 'c',
+				_1: {
+					ctor: '::',
+					_0: 'd',
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});
+var _user$project$Dog$SignIn = {ctor: 'SignIn'};
+var _user$project$Dog$tab_field = A2(
+	_elm_lang$html$Html$fieldset,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$button,
+			{
+				ctor: '::',
+				_0: _user$project$Style$button_style,
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(
+						_user$project$Dog$PageSwitch(_user$project$Dog$Page1)),
+					_1: {ctor: '[]'}
+				}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('page1'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$button,
+				{
+					ctor: '::',
+					_0: _user$project$Style$button_style,
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onClick(
+							_user$project$Dog$PageSwitch(_user$project$Dog$Page2)),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('page2'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{
+						ctor: '::',
+						_0: _user$project$Style$button_style,
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onClick(
+								_user$project$Dog$PageSwitch(_user$project$Dog$Page3)),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('page3'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$button,
+						{
+							ctor: '::',
+							_0: _user$project$Style$button_style,
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									_user$project$Dog$PageSwitch(_user$project$Dog$SignIn)),
+								_1: {ctor: '[]'}
+							}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('back'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});
+var _user$project$Dog$c = F2(
+	function (f, m) {
+		var _p2 = f;
+		switch (_p2.ctor) {
+			case 'F1':
+				return _elm_lang$core$Native_Utils.update(
+					m,
+					{value: m.value + 1});
+			case 'PageSwitch':
+				if (_p2._0.ctor === 'SignIn') {
+					return _elm_lang$core$Native_Utils.update(
+						m,
+						{html: _user$project$Dog$init_page});
+				} else {
+					return _elm_lang$core$Native_Utils.update(
+						m,
+						{
+							content: 'page',
+							html: A2(
+								_elm_lang$html$Html$div,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _user$project$Dog$tab_field,
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Dog$contents, _p2._0, m),
+										_1: {ctor: '[]'}
+									}
+								})
+						});
+				}
+			case 'InputUpdate':
+				return _elm_lang$core$Native_Utils.update(
+					m,
+					{input1: _p2._0});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					m,
+					{
+						html: A2(
+							_elm_lang$html$Html$div,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _user$project$Dog$tab_field,
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Dog$contents, _user$project$Dog$Page1, m),
+									_1: {ctor: '[]'}
+								}
+							})
+					});
+		}
+	});
+var _user$project$Dog$main = _elm_lang$html$Html$beginnerProgram(
+	{model: _user$project$Dog$init, view: _user$project$Dog$v, update: _user$project$Dog$c})();

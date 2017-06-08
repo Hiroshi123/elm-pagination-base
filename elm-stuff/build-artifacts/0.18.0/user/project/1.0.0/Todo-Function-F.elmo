@@ -1,0 +1,9 @@
+var _user$project$Todo_Function_F$Save = {ctor: 'Save'};
+var _user$project$Todo_Function_F$Remove = {ctor: 'Remove'};
+var _user$project$Todo_Function_F$Add = {ctor: 'Add'};
+var _user$project$Todo_Function_F$Input = function (a) {
+	return {ctor: 'Input', _0: a};
+};
+var _user$project$Todo_Function_F$SwitchTo = function (a) {
+	return {ctor: 'SwitchTo', _0: a};
+};

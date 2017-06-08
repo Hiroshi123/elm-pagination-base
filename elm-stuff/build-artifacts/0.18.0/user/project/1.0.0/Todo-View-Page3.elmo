@@ -1,0 +1,260 @@
+var _user$project$Todo_View_Page3$map = F2(
+	function (f, a) {
+		var _p0 = a;
+		if (_p0.ctor === '[]') {
+			return {ctor: '[]'};
+		} else {
+			return A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: f(_p0._0),
+					_1: {ctor: '[]'}
+				},
+				A2(_user$project$Todo_View_Page3$map, f, _p0._1));
+		}
+	});
+var _user$project$Todo_View_Page3$reduce = F3(
+	function (f, s, a) {
+		var _p1 = a;
+		if (_p1.ctor === '[]') {
+			return s;
+		} else {
+			return A2(
+				f,
+				_p1._0,
+				A3(_user$project$Todo_View_Page3$reduce, f, s, _p1._1));
+		}
+	});
+var _user$project$Todo_View_Page3$add_td = function (a) {
+	return A2(
+		_elm_lang$html$Html$td,
+		{
+			ctor: '::',
+			_0: _user$project$Todo_Style_Style$table_style,
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(a),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Todo_View_Page3$add_th = function (a) {
+	return A2(
+		_elm_lang$html$Html$th,
+		{
+			ctor: '::',
+			_0: _user$project$Todo_Style_Style$table_style,
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(a),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Todo_View_Page3$cir = A2(
+	_user$project$Todo_View_Page3$map,
+	_user$project$Todo_View_Page3$add_td,
+	{
+		ctor: '::',
+		_0: 'a',
+		_1: {
+			ctor: '::',
+			_0: 'b',
+			_1: {
+				ctor: '::',
+				_0: 'c',
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$Todo_View_Page3$f1 = function (a) {
+	return a + 3;
+};
+var _user$project$Todo_View_Page3$someL2 = A2(
+	_user$project$Todo_View_Page3$map,
+	_user$project$Todo_View_Page3$f1,
+	{
+		ctor: '::',
+		_0: 1,
+		_1: {
+			ctor: '::',
+			_0: 2,
+			_1: {
+				ctor: '::',
+				_0: 3,
+				_1: {
+					ctor: '::',
+					_0: 4,
+					_1: {
+						ctor: '::',
+						_0: 5,
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	});
+var _user$project$Todo_View_Page3$someL = A3(
+	_user$project$Todo_View_Page3$reduce,
+	F2(
+		function (x, y) {
+			return x + y;
+		}),
+	0,
+	{
+		ctor: '::',
+		_0: 1,
+		_1: {
+			ctor: '::',
+			_0: 2,
+			_1: {
+				ctor: '::',
+				_0: 3,
+				_1: {
+					ctor: '::',
+					_0: 4,
+					_1: {
+						ctor: '::',
+						_0: 5,
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	});
+var _user$project$Todo_View_Page3$initSeed = 31415;
+var _user$project$Todo_View_Page3$pi = A2(
+	_elm_lang$core$Random$step,
+	A2(_elm_lang$core$Random$int, 0, 100),
+	_elm_lang$core$Random$initialSeed(_user$project$Todo_View_Page3$initSeed));
+var _user$project$Todo_View_Page3$add = F2(
+	function (a, b) {
+		var _p2 = a;
+		if (_p2 === 0) {
+			return {ctor: '[]'};
+		} else {
+			return A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: b,
+					_1: {ctor: '[]'}
+				},
+				A2(_user$project$Todo_View_Page3$add, a - 1, b));
+		}
+	});
+var _user$project$Todo_View_Page3$record = A2(
+	_elm_lang$html$Html$tr,
+	{
+		ctor: '::',
+		_0: _user$project$Todo_Style_Style$table_style,
+		_1: {ctor: '[]'}
+	},
+	A2(
+		_user$project$Todo_View_Page3$map,
+		_user$project$Todo_View_Page3$add_td,
+		{
+			ctor: '::',
+			_0: 'td1',
+			_1: {
+				ctor: '::',
+				_0: 'td2',
+				_1: {
+					ctor: '::',
+					_0: 'td3',
+					_1: {ctor: '[]'}
+				}
+			}
+		}));
+var _user$project$Todo_View_Page3$f3 = A2(_user$project$Todo_View_Page3$add, 10, _user$project$Todo_View_Page3$record);
+var _user$project$Todo_View_Page3$page3 = function (m) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$text(
+				{
+					ctor: '::',
+					_0: _rundis$elm_bootstrap$Bootstrap_Form_Input$small,
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Todo_View_Common$tab_field,
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(m.page_info.title),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$input,
+							{ctor: '[]'},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$table,
+								{
+									ctor: '::',
+									_0: _user$project$Todo_Style_Style$table_style,
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$thead,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$tr,
+												{
+													ctor: '::',
+													_0: _user$project$Todo_Style_Style$table_style,
+													_1: {ctor: '[]'}
+												},
+												A2(
+													_user$project$Todo_View_Page3$map,
+													_user$project$Todo_View_Page3$add_th,
+													{
+														ctor: '::',
+														_0: 'td1',
+														_1: {
+															ctor: '::',
+															_0: 'td2',
+															_1: {
+																ctor: '::',
+																_0: 'td3',
+																_1: {ctor: '[]'}
+															}
+														}
+													})),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$tbody,
+											{ctor: '[]'},
+											_user$project$Todo_View_Page3$f3),
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$br,
+									{ctor: '[]'},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
+			}
+		});
+};
